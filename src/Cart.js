@@ -10,7 +10,7 @@ class Cart extends Component {
                 <header>
                     <CartHeader />
                 </header>
-                <CartItems />
+                <CartItems items={this.props.list}/>
                 <footer>
                     <CartFooter copyright='2016'/>
                 </footer>
