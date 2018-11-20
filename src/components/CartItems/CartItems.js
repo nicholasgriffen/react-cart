@@ -1,5 +1,5 @@
 import React from 'react'
-import CartItem from './CartItem'
+import CartItem from '../CartItem/CartItem'
 
 const CartItems = ({ items }) => {
     const itemList = items.map(item => {

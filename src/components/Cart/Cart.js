@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
-import CartHeader from './CartHeader'
-import CartItems from './CartItems'
-import CartFooter from './CartFooter'
+import CartHeader from '../CartHeader/CartHeader'
+import CartItems from '../CartItems/CartItems'
+import CartFooter from '../CartFooter/CartFooter'
 
 class Cart extends Component {
     render() {
