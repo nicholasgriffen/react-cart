@@ -44,7 +44,10 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <Cart list={this.state.cartItemsList}/>
+        <Cart 
+        list={this.state.cartItemsList} 
+        products={this.state.products}
+        />
       </div>
     )
   }
