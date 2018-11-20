@@ -41,12 +41,17 @@ class App extends Component {
         quantity: 1 },
     ]}
   }
+  onAddItem = ({quantity, product}) => {
+    console.log(quantity, product)
+  }
+
   render() {
     return (
       <div className="App">
         <Cart 
         list={this.state.cartItemsList} 
         products={this.state.products}
+        onAddItem={this.onAddItem}
         />
       </div>
     )

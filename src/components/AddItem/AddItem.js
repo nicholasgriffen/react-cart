@@ -16,9 +16,11 @@ class AddItem extends Component {
     }
     onSubmit = e => {
         e.preventDefault()
+
         const { quantity, productID } = this.state
         const product = this.props.products.find(product => product.id === productID)
-        console.log(quantity, product)
+        
+        this.props.onAddItem({quantity, product})
     }
     render() {
         const { products } = this.props

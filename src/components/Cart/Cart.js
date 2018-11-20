@@ -12,7 +12,7 @@ class Cart extends Component {
                     <CartHeader />
                 </header>
                 <CartItems items={this.props.list}/>
-                <AddItem products={this.props.products}/>
+                <AddItem products={this.props.products} onAddItem={this.props.onAddItem}/>
                 <footer>
                     <CartFooter copyright='2016'/>
                 </footer>
