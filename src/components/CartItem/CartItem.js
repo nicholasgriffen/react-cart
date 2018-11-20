@@ -3,10 +3,10 @@ import React from 'react'
 const CartItem = ({ name, price, quantity }) => {
     return (
         <div className="collection-item">
-            <div class="row">
-                <div class="col-md-8">{ name }</div>
-                <div class="col-md-2">{ price }</div>
-                <div class="col-md-2">{ quantity }</div>
+            <div className="row">
+                <div className="col-md-8">{ name }</div>
+                <div className="col-md-2">{ price }</div>
+                <div className="col-md-2">{ quantity }</div>
             </div>
         </div>
     )

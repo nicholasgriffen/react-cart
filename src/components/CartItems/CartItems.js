@@ -2,10 +2,10 @@ import React from 'react'
 import CartItem from '../CartItem/CartItem'
 
 const CartItems = ({ items }) => {
-    const itemList = items.map(item => {
+    const itemList = items.map((item, idx) => {
         return (
-            <div className="list-group-item">
-                <CartItem key={item.id} name={item.product.name} price={item.product.priceInCents / 100} quantity={item.quantity}/>
+            <div key={idx} className="list-group-item">
+                <CartItem name={item.product.name} price={item.product.priceInCents / 100} quantity={item.quantity}/>
             </div>
         )
     })
