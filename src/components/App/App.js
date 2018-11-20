@@ -42,7 +42,16 @@ class App extends Component {
     ]}
   }
   onAddItem = ({quantity, product}) => {
-    console.log(quantity, product)
+    const nextID = this.state.cartItemsList.reduce((acc, item) => {
+      return Math.max(acc, item.id)
+    }, 0) + 1
+    const newItem = { quantity, product, id: nextID }
+    const newItems = [...this.state.cartItemsList, newItem]
+    
+    this.setState({
+      ...this.state,
+      cartItemsList: newItems
+    })
   }
 
   render() {
