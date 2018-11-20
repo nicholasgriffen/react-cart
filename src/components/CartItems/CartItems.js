@@ -9,6 +9,9 @@ const CartItems = ({ items }) => {
             </div>
         )
     })
+    const total = items.reduce((acc, item) => {
+        return acc + (item.product.priceInCents * item.quantity)
+    }, 0) / 100
     return (
         <div className="container">
             <h1>Cart Items</h1>
@@ -21,6 +24,7 @@ const CartItems = ({ items }) => {
                     </div>
                 </div>
                 { itemList }
+                <p className="list-group-item">Total: ${total.toFixed(2)}</p>
             </div>
         </div>
     )
