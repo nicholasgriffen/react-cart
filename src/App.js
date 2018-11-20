@@ -2,8 +2,10 @@ import React, { Component } from 'react'
 import Cart from './Cart'
 
 class App extends Component {
-  render() {
-    const cartItemsList = [
+  constructor(props) {
+    super(props)
+    this.state = {
+      cartItemsList: [
       { id: 1, 
         product: { 
           id: 40, 
@@ -26,10 +28,12 @@ class App extends Component {
           priceInCents: 1999 
         }, 
         quantity: 1 },
-    ]
+    ]}
+  }
+  render() {
     return (
       <div className="App">
-        <Cart list={cartItemsList}/>
+        <Cart list={this.state.cartItemsList}/>
       </div>
     )
   }
